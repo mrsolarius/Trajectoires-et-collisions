@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.univ-grenoble-alpes.fr/trajectoires"
+           targetNamespace="http://www.univ-grenoble-alpes.fr/trajectoires"
+           elementFormDefault="qualified">
+    
+    <xs:element name="pos" type="Pos"/>
+    
+    <xs:complexType name="Pos">
+        <xs:sequence>
+            <xs:element name="coordonnée" type="Coordonnée"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Coordonnée">
+        <xs:attribute name="x" type="xs:double"/>
+        <xs:attribute name="y" type="xs:double"/>
+        <xs:attribute name="z" type="xs:double"/>
+    </xs:complexType>
+
+</xs:schema>
