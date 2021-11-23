@@ -10,20 +10,40 @@ package trajectoires;
  * @author volatlo
  */
 public class Etape {
-    public Coordonnée pos1;
-    public Coordonnée pos2;
+    private Coordonnée départ;
+    private Coordonnée arrivée;
 
     public Etape(Coordonnée pos1, Coordonnée pos2) {
-        this.pos1 = pos1;
-        this.pos2 = pos2;
+        set(pos1, pos2);
     }
     
     public double distance(){
-        return  Math.sqrt(Math.pow((pos1.getX()-pos2.getX()),2)+Math.pow((pos1.getY()-pos2.getY()),2)+Math.pow((pos1.getZ()-pos2.getZ()),2));
+        return  Math.sqrt(Math.pow((départ.getX()-arrivée.getX()),2)+Math.pow((départ.getY()-arrivée.getY()),2)+Math.pow((départ.getZ()-arrivée.getZ()),2));
     }
 
+    public void set(Coordonnée pos1, Coordonnée pos2) {
+        this.départ = pos1;
+        this.arrivée = pos2;
+    }
+
+    public Coordonnée getDépart() {
+        return départ;
+    }
+
+    public void setDépart(Coordonnée départ) {
+        this.départ = départ;
+    }
+
+    public Coordonnée getArrivée() {
+        return arrivée;
+    }
+
+    public void setArrivée(Coordonnée arrivée) {
+        this.arrivée = arrivée;
+    }    
+    
     @Override
     public String toString() {
-        return pos1+"->"+pos2;
+        return départ+"->"+arrivée;
     }
 }

@@ -18,7 +18,8 @@ public class Main {
         Coordonnée pos1;         
 
         // 2. instanciation utilisant le constructeur par défaut
-        pos1 = new Coordonnée();
+        pos1 = new Coordonnée(0, 0, 0);
+        Coordonnée pos2 = new Coordonnée(1, 1, 0);
 
         // 3. remplissage : initialisation de la première Coordonnée avec les valeurs (0.1,0.0,-1.0)
         pos1.set(0.1, 0.0, -1.0);
@@ -29,7 +30,7 @@ public class Main {
 
         // 1. déclaration
         //... ajouter code...
-        Coordonnée pos2;
+        //Coordonnée pos2;
         
         // 2. instanciation utilisant le constructeur qui initialise la Coordonnée avec les valeurs (1.0, 1.0, 0.01)
         //... ajouter code...

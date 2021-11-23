@@ -16,11 +16,15 @@ public class Coordonnée {
     private double z;
 
     public Coordonnée() {
-        this.set(0.0, 0.0, 0.0);
+        set(0.0, 0.0, 0.0);
     }
 
     public Coordonnée(double x, double y, double z) {
-        this.set(x, y, z);
+        set(x, y, z);
+    }
+    
+    public Coordonnée(Coordonnée c){
+        set(c.getX(),c.getY(),c.getZ());
     }
 
     public void set(double x, double y, double z) {
