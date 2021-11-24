@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<ns1:trajectoire
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:ns1='http://www.univ-grenoble-alpes.fr/trajectoires'
+    xsi:schemaLocation='http://www.univ-grenoble-alpes.fr/trajectoires Trajectoire.xsd'>
+    <ns1:pos x="3" y="1" z="0"></ns1:pos>
+    <ns1:pos x="4" y="2" z="0"></ns1:pos>
+    <ns1:pos x="4" y="2" z="-1"></ns1:pos>
+    <ns1:pos x="6" y="6" z="6"></ns1:pos>
+
+</ns1:trajectoire>

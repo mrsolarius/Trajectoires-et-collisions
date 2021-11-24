@@ -6,7 +6,9 @@ and open the template in the editor.
 -->
 
 
-<etape xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.univ-grenoble-alpes.fr/trajectoires" xsi:schemaLocation="http://www.univ-grenoble-alpes.fr/trajectoires Etape.xsd">
+<etape xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns="http://www.univ-grenoble-alpes.fr/trajectoires" 
+       xsi:schemaLocation="http://www.univ-grenoble-alpes.fr/trajectoires Etape.xsd">
     <pos1 x="240" y="60" z="4" />
     <pos2 x="24" y="640" z="42" />
 </etape>

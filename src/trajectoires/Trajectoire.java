@@ -5,8 +5,15 @@
  */
 package trajectoires;
 
+import com.sun.org.apache.xerces.internal.parsers.DOMParser;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 /**
  *
@@ -46,6 +53,40 @@ public class Trajectoire {
             }
         }
         return distance;
+    }
+
+    public void vide() {
+        pos.clear();
+    }
+
+    public void readDOM(String path, String filename) throws SAXException, IOException {
+        // crée un parser de type DOM
+        DOMParser parser = new DOMParser();
+        // parse le document XML correspondant au fichier filename dans le chemin path
+        parser.parse(path + filename);
+        // récupère l'instance de document
+        Document doc = parser.getDocument();
+        // récupère la liste des éléments nommés tr:pos
+        NodeList posList = doc.getChildNodes();
+        NodeList elements = posList.item(1).getChildNodes();
+        // vide la liste de coordonnées
+        this.vide();
+        // déclare une coordonnée
+        Coordonnée c;
+        // parcoure la liste posList
+        for (int i = 0; i < elements.getLength();i++) {
+            Node node = elements.item(i);
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
+                try{
+                c = new Coordonnée(Double.valueOf(((Element) node).getAttribute("x")),
+                        Double.valueOf(((Element) node).getAttribute("y")),
+                        Double.valueOf(((Element) node).getAttribute("z")));
+                ajoute(c);
+                }catch(NumberFormatException e){
+                    
+                } 
+            }
+        }
     }
 
     @Override
