@@ -3,19 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package simulation;
+package fr.litopia.simulation;
 
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import objets.Objet;
+
+import fr.litopia.objets.Objet;
 import org.xml.sax.SAXException;
-import trajectoires.Coordonnée;
-import trajectoires.Etape;
-import trajectoires.Trajectoire;
+import fr.litopia.trajectoires.Coordonnée;
+import fr.litopia.trajectoires.Etape;
+import fr.litopia.trajectoires.Trajectoire;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
 
 /**
- *
  * @author volatlo
  */
 public class Main {
@@ -55,11 +58,16 @@ public class Main {
 
         Trajectoire trajectoire = new Trajectoire();
         try {
-            trajectoire.readDOM("src/xml/", "trajectoire.xml");
+            trajectoire.readDOM("src/fr/litopia/xml/", "trajectoire.xml");
         } catch (SAXException | IOException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
 
+        try {
+            trajectoire.writeDOM("src/fr/litopia/xml/", "test_trajectoire.xml");
+        } catch (SAXException | IOException | TransformerException | ParserConfigurationException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
         System.out.println(trajectoire.toString());
         System.out.println("\nDistance parcourue sur toute la trajectoire : " + trajectoire.distance());
 

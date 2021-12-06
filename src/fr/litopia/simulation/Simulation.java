@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package simulation;
+package fr.litopia.simulation;
 
 import java.util.ArrayList;
-import objets.Environnement;
-import objets.Objet;
-import static objets.Objet.Type.Environnement;
-import objets.Particule;
-import objets.ParticuleSuivie;
-import trajectoires.Coordonnée;
+import fr.litopia.objets.Environnement;
+import fr.litopia.objets.Objet;
+import fr.litopia.objets.Particule;
+import fr.litopia.objets.ParticuleSuivie;
+import fr.litopia.trajectoires.Coordonnée;
 
 /**
  *

@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package objets;
+package fr.litopia.objets;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import simulation.Random;
-import trajectoires.Coordonnée;
+import fr.litopia.simulation.Random;
+import fr.litopia.trajectoires.Coordonnée;
 
 /**
  *

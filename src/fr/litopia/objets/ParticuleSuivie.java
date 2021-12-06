@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package objets;
+package fr.litopia.objets;
 
 import java.util.ArrayList;
-import trajectoires.Trajectoire;
+import fr.litopia.trajectoires.Trajectoire;
 
 /**
  *
